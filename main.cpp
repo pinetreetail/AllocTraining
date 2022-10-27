@@ -22,8 +22,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	SetDrawScreen(DX_SCREEN_BACK);
 
 	// 最初のシーンの初期化
-	SceneManager scene;
-	scene.init();
+	SceneManager* pScene = new SceneManager;
+	pScene->init();
 
 	while (ProcessMessage() == 0)
 	{
@@ -31,8 +31,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		// 画面のクリア
 		ClearDrawScreen();
 
-		scene.update();
-		scene.draw();
+		pScene->update();
+		pScene->draw();
 
 		//裏画面を表画面を入れ替える
 		ScreenFlip();
@@ -46,7 +46,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		}
 	}
 
-	scene.end();
+	pScene->end();
+	delete pScene;
 
 	DxLib_End();				// ＤＸライブラリ使用の終了処理
 
