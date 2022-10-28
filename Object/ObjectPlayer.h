@@ -4,17 +4,19 @@
 
 class SceneMain;
 
-class ObjectTest
+class ObjectPlayer
 {
 public:
-	ObjectTest();
-	virtual ~ObjectTest();
+	ObjectPlayer();
+	virtual ~ObjectPlayer();
 
 	virtual void init();
 	virtual void end();
 
 	virtual void update();
 	virtual void draw();
+
+	void setHandle(int handle) { m_hGraph = handle; }
 
 protected:
 	// グラフィックハンドル

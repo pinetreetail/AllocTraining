@@ -7,10 +7,22 @@ namespace
 	const char* const kPlayerFilename = "Data/player.bmp";
 }
 
+SceneTest::SceneTest():
+	m_hPlayer(-1),
+	m_player()
+{
+
+}
+SceneTest::~SceneTest()
+{
+
+}
+
 void SceneTest::init()
 {
 	m_hPlayer = LoadGraph(kPlayerFilename);
-	m_obj.init();
+	m_player.init();
+	m_player.setHandle(m_hPlayer);
 }
 
 void SceneTest::end()
@@ -20,12 +32,12 @@ void SceneTest::end()
 
 SceneBase* SceneTest::update()
 {
-	m_obj.update();
+	m_player.update();
 	return this;
 }
 
 void SceneTest::draw()
 {
-	m_obj.draw();
+	m_player.draw();
 }
 

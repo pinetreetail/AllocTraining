@@ -1,8 +1,8 @@
 #include "SceneManager.h"
 #include <cassert>
 #include "SceneTest.h"
-//#include "Pad.h"
-#include "Mouse.h"
+#include "Pad.h"
+//#include "Mouse.h"
 
 SceneManager::SceneManager()
 {
@@ -33,8 +33,8 @@ void SceneManager::update()
 	assert(m_pScene);
 	if (!m_pScene)	return;
 
-//	Pad::update();
-	Mouse::update();
+	Pad::update();
+//	Mouse::update();
 	SceneBase* pScene = m_pScene->update();
 	if (pScene != m_pScene)
 	{

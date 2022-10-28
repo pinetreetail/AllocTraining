@@ -1,15 +1,13 @@
 #pragma once
 #include "SceneBase.h"
 
-#include "ObjectTest.h"
+#include "ObjectPlayer.h"
 
 class SceneTest : public SceneBase
 {
 public:
-	SceneTest() 
-	{
-	}
-	virtual ~SceneTest() {}
+	SceneTest();
+	virtual ~SceneTest();
 
 
 	virtual void init() override;
@@ -21,5 +19,5 @@ public:
 private:
 	int			m_hPlayer;
 
-	ObjectTest	m_obj;
+	ObjectPlayer	m_player;
 };
