@@ -49,5 +49,5 @@ void ObjectPlayer::update()
 
 void ObjectPlayer::draw()
 {
-	DrawGraph(static_cast<int>(m_pos.x), static_cast<int>(m_pos.y), m_hGraph, false);
+	DrawGraph(static_cast<int>(m_pos.x), static_cast<int>(m_pos.y), m_hGraph, true);
 }

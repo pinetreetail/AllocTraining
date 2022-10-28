@@ -1,7 +1,9 @@
 #pragma once
 #include "SceneBase.h"
+#include <vector>
 
 #include "ObjectPlayer.h"
+#include "ObjectEnemy.h"
 
 class SceneTest : public SceneBase
 {
@@ -18,6 +20,11 @@ public:
 
 private:
 	int			m_hPlayer;
+	int			m_hEnemy;
 
 	ObjectPlayer	m_player;
+	std::vector<ObjectEnemy>	m_enemy;
+
+	// ìGÇÃê∂ê¨
+	int			m_enemyInterval;
 };
