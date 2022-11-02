@@ -4,6 +4,8 @@
 
 #include "ObjectPlayer.h"
 #include "ObjectEnemy.h"
+#include "ObjectEnemyDir.h"
+#include "ObjectEnemyThrow.h"
 
 class SceneTest : public SceneBase
 {
@@ -22,9 +24,10 @@ private:
 	int			m_hPlayer;
 	int			m_hEnemy;
 
-	ObjectPlayer	m_player;
-	std::vector<ObjectEnemy>	m_enemy;
+	ObjectPlayer*	m_pPlayer;
+	std::vector<ObjectEnemy*>	m_pEnemy;
 
 	// ìGÇÃê∂ê¨
 	int			m_enemyInterval;
+	int			m_enemyCreateNum;
 };
