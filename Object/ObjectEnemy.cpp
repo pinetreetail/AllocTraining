@@ -11,7 +11,8 @@ namespace
 ObjectEnemy::ObjectEnemy() :
 	m_hGraph(-1),
 	m_isExist(false),
-	m_pos()
+	m_pos(),
+	m_rot(0)
 {
 
 }
@@ -39,10 +40,13 @@ void ObjectEnemy::update()
 	{
 		m_isExist = false;
 	}
+	m_rot -= 0.1;
+	GetGraphSize(m_hGraph, &width, &height);
 }
 
 void ObjectEnemy::draw()
 {
 	if (!m_isExist)	return;
-	DrawGraph(static_cast<int>(m_pos.x), static_cast<int>(m_pos.y), m_hGraph, true);
+//	DrawGraph(static_cast<int>(m_pos.x), static_cast<int>(m_pos.y), m_hGraph, true);
+	DrawRotaGraph(static_cast<int>(m_pos.x) + width/2, static_cast<int>(m_pos.y) + height/2, 1.0, m_rot, m_hGraph, true);
 }

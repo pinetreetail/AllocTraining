@@ -31,4 +31,6 @@ protected:
 	bool	m_isExist;
 	// ç∂è„ç¿ïW
 	Vec2	m_pos;
+
+	double m_rot;
 };
