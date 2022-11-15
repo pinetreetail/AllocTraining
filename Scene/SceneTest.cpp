@@ -99,7 +99,7 @@ SceneBase* SceneTest::update()
 			ObjectEnemyDir* pTemp = dynamic_cast<ObjectEnemyDir*>(pEnemy);
 			if (!pTemp)
 			{
-				pTemp->setDir(120.0f);
+				pTemp->setDir(static_cast<float>(GetRand(359)));
 			}
 
 			ObjectEnemyThrow* pTempThrow = dynamic_cast<ObjectEnemyThrow*>(pEnemy);

@@ -16,8 +16,7 @@ ObjectEnemyDir::~ObjectEnemyDir()
 void ObjectEnemyDir::update()
 {
 	if (!m_isExist)	return;
-	m_pos.x += m_vec.x;
-	m_pos.y += m_vec.y;
+	m_pos += m_vec;
 
 	if ((m_pos.x < 0.0f) && (m_vec.x < 0))
 	{
@@ -34,6 +33,14 @@ void ObjectEnemyDir::update()
 	if ((m_pos.y > Game::kScreenHeight) && (m_vec.y > 0))
 	{
 		m_isExist = false;
+	}
+	if (m_pos.x > 0)
+	{
+		m_rot += 0.1;
+	}
+	else
+	{
+		m_rot -= 0.1;
 	}
 
 

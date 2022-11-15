@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ObjectEnemyArrow.cpp" />
     <ClCompile Include="ObjectEnemyDir.cpp" />
     <ClCompile Include="ObjectEnemyThrow.cpp" />
     <ClCompile Include="Object\ObjectEnemy.cpp" />
@@ -153,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h" />
+    <ClInclude Include="ObjectEnemyArrow.h" />
     <ClInclude Include="ObjectEnemyDir.h" />
     <ClInclude Include="ObjectEnemyThrow.h" />
     <ClInclude Include="Object\ObjectEnemy.h" />

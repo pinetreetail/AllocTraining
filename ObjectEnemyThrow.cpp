@@ -4,12 +4,12 @@
 
 namespace
 {
-	constexpr float kGravity = 0.8f;
+	constexpr float kGravity = 0.2f;
 
 }
 
 ObjectEnemyThrow::ObjectEnemyThrow() :
-	m_vec(8.0f, -8.0f)
+	m_vec(6.0f, -6.0f)
 {
 
 }
@@ -30,4 +30,5 @@ void ObjectEnemyThrow::update()
 	{
 		m_isExist = false;
 	}
+	m_rot -= 0.1;
 }
